@@ -18,3 +18,34 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #include "Person.h"
+#include <string>
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+Person::Person(string name, int ID, vector<int>* courseId, classType type) : 
+    name(name), 
+    ID(ID),
+    type(type),
+    courseId(courseId)
+{}
+
+void Person::displayDetails() {
+    cout << "PERSON " << endl;
+    cout << "Name: " << name << endl;
+    cout << "ID: " << ID << endl;
+    cout << "Type: " << ID << endl;
+}
+
+vector<int>* Person::getCourseId() {
+    return courseId;
+}
+
+Person::classType Person::getClassType() {
+    return type;
+}
+
+string Person::getName() {
+    return name;
+}

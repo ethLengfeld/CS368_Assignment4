@@ -35,10 +35,9 @@ class Person {
         /**
          * TODO
          */
-
     public:
 
-                // TODO add comment
+        // TODO add comment
         enum classType {
             PER,
             EMP,
@@ -47,42 +46,26 @@ class Person {
             TA
         };
 
-            /**
+        /**
          * TODO
          */
-        // string name{"Unknown person"};
-        // int ID{-1};
-        // classType type{PER};
-        // vector<int>* courseId{NULL};
+        Person() = default;
 
-
-        // Person(string name = "Unknown person", int ID = -1, vector<int>* courseId = NULL, classType type = PER) : 
-        //     name(name), 
-        //     ID(ID),
-        //     type(type),
-        //     courseId(courseId)
-        // {}
-
-        Person(string name, int ID, vector<int>* courseId, classType type) : 
-            name(name), 
-            ID(ID),
-            type(type),
-            courseId(courseId)
-        {}
+        Person(string name, int ID, vector<int>* courseId, classType type);
 
         // deconstructor
-        ~Person();
+       // ~Person();
 
         /**
          * TODO
          */
-        void displayDetails();
+        virtual void displayDetails();
 
         /**
          * TODO
          * @return vector <int>* - 
          */
-        vector <int>* getCourseId();
+        vector<int>* getCourseId();
 
         /**
          * TODO
@@ -102,7 +85,6 @@ class Person {
         int ID{-1};
         classType type{PER};
         vector<int>* courseId{NULL};
-
 
 };
 

@@ -30,13 +30,13 @@ class Student: public Person {
 
     public:
 
-        Student(string name = "Unknown student", int ID = -1, vector<int>* courseId = NULL, classType type = STU, vector<float>* grade = NULL) : 
-            name(name), 
-            ID(ID),
-            type(type),
-            courseId(courseId),
-            grade(grade),
-        {}
+        // Student(string name = "Unknown student", int ID = -1, vector<int>* courseId = NULL, classType type = STU, vector<float>* grade = NULL) : 
+        //     name(name), 
+        //     ID(ID),
+        //     type(type),
+        //     courseId(courseId),
+        //     grade(grade),
+        // {}
 
         void displayDetails();
 

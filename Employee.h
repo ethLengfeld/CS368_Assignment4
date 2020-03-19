@@ -22,24 +22,35 @@
 
 
 #include "Person.h"
+#include <iostream>
+
+using namespace std;
+
 
 class Employee: public Person {
 
     public:
 
-        Employee(string name = "Unknown employee", int ID = -1, vector<int>* courseId = NULL, classType type = EMP, int officeNum = 0) : 
-            name(name), 
-            ID(ID),
-            type(type),
-            courseId(courseId),
-            officeNum(officeNum),
+        // Employee(string name = "Unknown employee", int ID = -1, vector<int>* courseId = NULL, classType type = EMP, int officeNum = 0) : 
+        //     name(name), 
+        //     ID(ID),
+        //     type(type),
+        //     courseId(courseId),
+        //     officeNum(officeNum),
 
+        int officeNum{0};
+        // {}
+        Employee() = default;
+
+        Employee(string name = "Unknown employee", int ID = -1, vector<int>* courseId = NULL, classType type = EMP, int officeNum = 0) :
+            Person(name, ID, courseId, type),
+            officeNum(officeNum)
         {}
 
         void displayDetails();
 
-    private:
-        int officeNum;
+
+
 
 };
 

@@ -16,3 +16,16 @@
 // Online sources:   
 //
 ////////////////////////////////////////////////////////////////////////////////
+
+// #include "Employee.h"
+
+// class Employee: public Person {
+
+//     void displayDetails() {
+
+//         cout << PERSON::name << PERSON::officeNum << endl;
+
+//     }
+
+
+// };
