@@ -16,3 +16,31 @@
 // Online sources:   
 //
 ////////////////////////////////////////////////////////////////////////////////
+
+#ifndef EMPLOYEE
+#define EMPLOYEE
+
+
+#include "Person.h"
+
+class Employee: public Person {
+
+    public:
+
+        Employee(string name = "Unknown employee", int ID = -1, vector<int>* courseId = NULL, classType type = EMP, int officeNum = 0) : 
+            name(name), 
+            ID(ID),
+            type(type),
+            courseId(courseId),
+            officeNum(officeNum),
+
+        {}
+
+        void displayDetails();
+
+    private:
+        int officeNum;
+
+};
+
+#endif

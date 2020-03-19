@@ -16,3 +16,13 @@
 // Online sources:   
 //
 ////////////////////////////////////////////////////////////////////////////////
+
+#include "DisplayUtility.h"
+
+void displayAllStudentNames(vector<Person*> v, int courseID) {
+    cout << "displayAllStudentNames " << courseID << endl;
+}
+
+void displayAllPersonNames(vector<Person*> v, int courseID) {
+    cout << "displayAllStudentNames " << courseID << endl;
+}

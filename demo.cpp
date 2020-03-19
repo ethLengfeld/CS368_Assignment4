@@ -16,3 +16,19 @@
 // Online sources:   
 //
 ////////////////////////////////////////////////////////////////////////////////
+
+#include <iostream>
+#include "DisplayUtility.h"
+#include "Person.h"
+#include <vector>
+
+using namespace std;
+
+int main() {
+
+    vector<Person*> persons;
+
+    DISPLAYUTILITY::displayAllPersonNames(persons, 12);
+
+    DISPLAYUTILITY::displayAllStudentNames(persons, 190);
+}

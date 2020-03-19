@@ -28,11 +28,17 @@
 #include <string>
 #include <vector>
 
+using namespace std;
+
 class Person {
+
+        /**
+         * TODO
+         */
 
     public:
 
-        // TODO add comment
+                // TODO add comment
         enum classType {
             PER,
             EMP,
@@ -41,23 +47,31 @@ class Person {
             TA
         };
 
-        /**
+            /**
          * TODO
          */
-        std::string name;
-        int ID;
-        classType type;
-        vector<int>* courseId;
+        // string name{"Unknown person"};
+        // int ID{-1};
+        // classType type{PER};
+        // vector<int>* courseId{NULL};
 
-        /**
-         * TODO
-         */
-        Person(std::string name = "Unknown peson", int ID = -1, vector<int>* courseId = NULL, classType type = PER) : 
+
+        // Person(string name = "Unknown person", int ID = -1, vector<int>* courseId = NULL, classType type = PER) : 
+        //     name(name), 
+        //     ID(ID),
+        //     type(type),
+        //     courseId(courseId)
+        // {}
+
+        Person(string name, int ID, vector<int>* courseId, classType type) : 
             name(name), 
             ID(ID),
             type(type),
             courseId(courseId)
         {}
+
+        // deconstructor
+        ~Person();
 
         /**
          * TODO
@@ -80,7 +94,15 @@ class Person {
          * TODO
          * @return std::string - 
          */
-        std::string getName();
+        string getName();
+
+    private:
+
+        string name{"Unknown person"};
+        int ID{-1};
+        classType type{PER};
+        vector<int>* courseId{NULL};
+
 
 };
 

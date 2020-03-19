@@ -16,3 +16,30 @@
 // Online sources:   
 //
 ////////////////////////////////////////////////////////////////////////////////
+
+#ifndef FACULTY
+#define FACULTY
+
+#include "Employee.h"
+
+class Faculty: public Employee {
+
+       public:
+
+        Faculty(string name = "Unknown faculty", int ID = -1, vector<int>* courseId = NULL, classType type = FAC, int officeNum = 0, int publications = 0) : 
+            name(name), 
+            ID(ID),
+            type(type),
+            officeNum(officeNum),
+            publications(publications),
+        {}
+
+        void displayDetails();
+
+    private:
+
+        int publications;
+
+};
+
+#endif

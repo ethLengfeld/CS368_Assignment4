@@ -16,3 +16,35 @@
 // Online sources:   
 //
 ////////////////////////////////////////////////////////////////////////////////
+
+#ifndef TEACHASSISTANT
+#define TEACHASSISTANT
+
+#include "Student.h"
+#include "Employee.h"
+
+class TeachingAssistant: public Employee, public Student {
+
+    public:
+
+        TeachingAssistant(string name = "Unknown TA", int ID = -1, vector<int>* courseId = NULL, classType type = TA, vector<float>* grade = NULL, int officeNum = 0, int officeHours = 0, int TAcourse = 0) : 
+            name(name), 
+            ID(ID),
+            type(type),
+            grade(grade),
+            courseId(courseId),
+            officeNum(officeNum),
+            officeHours(officeHours),
+            TAcourse(TAcourse),
+        {}
+
+        void displayDetails();
+
+
+    private:
+        int officeHours;
+        int TAcourse;
+
+};
+
+#endif
