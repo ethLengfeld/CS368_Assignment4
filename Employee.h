@@ -31,26 +31,17 @@ class Employee: public Person {
 
     public:
 
-        // Employee(string name = "Unknown employee", int ID = -1, vector<int>* courseId = NULL, classType type = EMP, int officeNum = 0) : 
-        //     name(name), 
-        //     ID(ID),
-        //     type(type),
-        //     courseId(courseId),
-        //     officeNum(officeNum),
+        int officeNum;
 
-        int officeNum{0};
-        // {}
-        Employee() = default;
+        Employee();
 
-        Employee(string name = "Unknown employee", int ID = -1, vector<int>* courseId = NULL, classType type = EMP, int officeNum = 0) :
-            Person(name, ID, courseId, type),
-            officeNum(officeNum)
-        {}
+        Employee(string name, int ID, vector<int>* courseId, classType type, int officeNum);
 
+        /**
+         * TODO
+         * 
+        */
         void displayDetails();
-
-
-
 
 };
 

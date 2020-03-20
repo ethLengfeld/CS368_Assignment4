@@ -13,19 +13,31 @@
 // CS Login:         lengfeld
 //
 //
-// Online sources:   
+// Online sources:   https://www.learncpp.com/cpp-tutorial/89-class-code-and-header-files/
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-// #include "Employee.h"
+#include "Employee.h"
 
-// class Employee: public Person {
+Employee::Employee():
+        Person("Unknown employee",-1,NULL,EMP)
+        {
+            officeNum = 0;
+        }
 
-//     void displayDetails() {
+Employee::Employee(string name = "Unknown employee", int ID = -1, vector<int>* courseId = NULL, classType type = EMP, int officeNum = 0) :
+            Person(name, ID, courseId, type)
+        {
+            officeNum = officeNum;
+        }
 
-//         cout << PERSON::name << PERSON::officeNum << endl;
 
-//     }
-
-
-// };
+void Employee::displayDetails() {
+    cout << "EMPLOYEE" << endl;
+    cout << "Name: " << Person::getName() << endl;
+    cout << "ID: " << Person::getID() << endl;
+    if(Person::getClassType()==Person::classType::EMP) {
+        cout << "Type: EMP" << endl;
+    }
+    cout << "Office number " << officeNum << endl;
+}

@@ -39,30 +39,30 @@ int main() {
 
     Person::classType type = Person::classType::PER;
 
+
     Person playerOne("Ethan", 21, courseId, type);
-
     playerOne.displayDetails();
-
-    cout << "name = " << playerOne.getName() << endl;
-    cout << "courseId = " << playerOne.getCourseId() << endl;
-
+    // cout << "name = " << playerOne.getName() << endl;
+    // cout << "courseId = " << playerOne.getCourseId() << endl << endl;
     // switch(playerOne.getClassType()) 
     // {
     //     case(Person::classType::PER):
     //                     cout << "class type = PERSON"  << endl << endl;
     //                     break;
     // }
+    cout << endl;
 
     Person playerTwo;
-
     playerTwo.displayDetails();
-    
     // switch(playerTwo.getClassType()) {
     //     case(Person::classType::PER):
     //                     cout << "class type = PERSON"  << endl;
     //                     break;
     // }
+    // cout << "name = " << playerTwo.getName() << endl;
+    // cout << "courseId = " << playerTwo.getCourseId() << endl << endl;
+    cout << endl;
 
-    cout << "name = " << playerTwo.getName() << endl;
-    cout << "courseId = " << playerTwo.getCourseId() << endl;
+    Employee employee;
+    employee.displayDetails();
 }

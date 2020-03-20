@@ -46,6 +46,7 @@ class Person {
             TA
         };
 
+
         /**
          * TODO
          */
@@ -54,7 +55,7 @@ class Person {
         Person(string name, int ID, vector<int>* courseId, classType type);
 
         // deconstructor
-       // ~Person();
+        virtual ~Person() {}
 
         /**
          * TODO
@@ -79,8 +80,13 @@ class Person {
          */
         string getName();
 
-    private:
+        /**
+         * TODO
+         * @return int - 
+         */
+        int getID();
 
+    private:
         string name{"Unknown person"};
         int ID{-1};
         classType type{PER};

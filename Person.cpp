@@ -24,7 +24,7 @@
 
 using namespace std;
 
-Person::Person(string name, int ID, vector<int>* courseId, classType type) : 
+Person::Person(string name = "Unknown person", int ID = -1, vector<int>* courseId = NULL, classType type = PER) : 
     name(name), 
     ID(ID),
     type(type),
@@ -33,9 +33,11 @@ Person::Person(string name, int ID, vector<int>* courseId, classType type) :
 
 void Person::displayDetails() {
     cout << "PERSON " << endl;
-    cout << "Name: " << name << endl;
-    cout << "ID: " << ID << endl;
-    cout << "Type: " << ID << endl;
+    cout << "Name: " << Person::getName() << endl;
+    cout << "ID: " << Person::getID() << endl;
+    if(Person::getClassType()==Person::classType::PER) {
+        cout << "Type: PER" << endl;
+    }
 }
 
 vector<int>* Person::getCourseId() {
@@ -48,4 +50,8 @@ Person::classType Person::getClassType() {
 
 string Person::getName() {
     return name;
+}
+
+int Person::getID() {
+    return ID;
 }
