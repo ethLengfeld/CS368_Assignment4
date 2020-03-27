@@ -19,25 +19,13 @@
 
 #include "Employee.h"
 
-Employee::Employee():
-        Person("Unknown employee",-1,NULL,EMP)
-        {
-            officeNum = 0;
-        }
-
-Employee::Employee(string name = "Unknown employee", int ID = -1, vector<int>* courseId = NULL, classType type = EMP, int officeNum = 0) :
-            Person(name, ID, courseId, type)
-        {
-            officeNum = officeNum;
-        }
-
+Employee::Employee(string name, int ID, vector<int>* courseId, classType type, int officeNum) :
+        Person{name, ID, courseId, type},
+        officeNum{officeNum}
+{}
 
 void Employee::displayDetails() {
     cout << "EMPLOYEE" << endl;
-    cout << "Name: " << Person::getName() << endl;
-    cout << "ID: " << Person::getID() << endl;
-    if(Person::getClassType()==Person::classType::EMP) {
-        cout << "Type: EMP" << endl;
-    }
-    cout << "Office number " << officeNum << endl;
+    Person::displayDetails();
+    cout << "Office number " << Employee::officeNum << endl;
 }

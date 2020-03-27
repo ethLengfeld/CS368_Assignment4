@@ -16,3 +16,21 @@
 // Online sources:   
 //
 ////////////////////////////////////////////////////////////////////////////////
+
+#include "TeachingAssistant.h"
+
+TeachingAssistant::TeachingAssistant(string name, int ID, vector<int>* courseId, 
+                    classType type, vector<float>* grade, int officeNum, int officeHours, int TAcourse) : 
+    Person{name, ID , courseId, type},
+    Employee{name,ID,courseId,type,officeNum},
+    Student{name,ID,courseId,type,grade},
+    officeHours{officeHours},
+    TAcourse{TAcourse}
+{}
+
+void TeachingAssistant::displayDetails() {
+    Student::displayDetails();
+    cout << "Office number " << Employee::officeNum << endl;
+    cout << "Course TA: " << TeachingAssistant::TAcourse << endl;
+    cout << "Office hours: " << TeachingAssistant::officeHours << endl;
+}

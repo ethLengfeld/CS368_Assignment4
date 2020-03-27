@@ -24,22 +24,21 @@
 
 class Faculty: public Employee {
 
-       public:
+        public:
 
-        Faculty(string name = "Unknown faculty", int ID = -1, vector<int>* courseId = NULL, classType type = FAC, int officeNum = 0, int publications = 0) : 
-            name(name), 
-            ID(ID),
-            type(type),
-            officeNum(officeNum),
-            publications(publications),
-        {}
 
-        void displayDetails();
+                Faculty(string name = "Unknown faculty", int ID = -1, vector<int>* courseId = nullptr, 
+                                classType type = FAC, int officeNum = 0, int publications = 0);
 
-    private:
+                // deconstuctor
+                virtual ~Faculty() = default;
 
-        int publications;
+                void displayDetails();
 
+        private:
+                int publications;
+
+                void printCourses();
 };
 
 #endif

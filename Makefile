@@ -6,10 +6,10 @@ CXX=g++
 CXXFLAGS = -Wall
 EXE = DemoDepartmentDatabase
 
-all: demo.o DisplayUtility.o Person.o Employee.o
-	$(CXX) $(CXXFLAGS) -o $(EXE) demo.o DisplayUtility.o Person.o Employee.o
+all: demo.o DisplayUtility.o Person.o Employee.o Faculty.o Student.o TeachingAssistant.o
+	$(CXX) $(CXXFLAGS) -o $(EXE) demo.o DisplayUtility.o Person.o Employee.o Faculty.o Student.o TeachingAssistant.o
 
-demo.o: demo.cpp DisplayUtility.o Person.o Employee.o
+demo.o: demo.cpp DisplayUtility.o Person.o Employee.o Faculty.o Student.o TeachingAssistant.o
 	$(CXX) $(CXXFLAGS) -c demo.cpp
 
 DisplayUtility.o: TeachingAssistant.o Faculty.o Student.o Employee.o Person.o DisplayUtility.h DisplayUtility.cpp

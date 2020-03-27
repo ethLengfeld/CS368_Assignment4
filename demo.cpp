@@ -21,6 +21,8 @@
 #include "DisplayUtility.h"
 #include "Person.h"
 #include "Employee.h"
+#include "Faculty.h"
+#include "TeachingAssistant.h"
 #include <vector>
 
 using namespace std;
@@ -35,13 +37,13 @@ int main() {
     // Person playerOne;
     // playerOne.name = "Ethan";
 
-    vector<int>* courseId = NULL;
+    vector<int>* courseId = nullptr;
 
-    Person::classType type = Person::classType::PER;
+    // classType type = PER;
 
 
-    Person playerOne("Ethan", 21, courseId, type);
-    playerOne.displayDetails();
+    // Person playerOne("Ethan", 21, courseId, type);
+    // playerOne.displayDetails();
     // cout << "name = " << playerOne.getName() << endl;
     // cout << "courseId = " << playerOne.getCourseId() << endl << endl;
     // switch(playerOne.getClassType()) 
@@ -50,10 +52,10 @@ int main() {
     //                     cout << "class type = PERSON"  << endl << endl;
     //                     break;
     // }
-    cout << endl;
+    // cout << endl;
 
-    Person playerTwo;
-    playerTwo.displayDetails();
+    // Person playerTwo;
+    // playerTwo.displayDetails();
     // switch(playerTwo.getClassType()) {
     //     case(Person::classType::PER):
     //                     cout << "class type = PERSON"  << endl;
@@ -61,8 +63,27 @@ int main() {
     // }
     // cout << "name = " << playerTwo.getName() << endl;
     // cout << "courseId = " << playerTwo.getCourseId() << endl << endl;
-    cout << endl;
+    // cout << endl;
 
-    Employee employee;
-    employee.displayDetails();
+    // Employee employee;
+    // employee.displayDetails();
+
+    // Faculty(string name,int ID,vector<int>* courseId,classType type,int officeNum,int publications)
+    // Faculty f1 = {"Bill, Kerman", 123, courseId, FAC, 5555, 30};
+    // f1.displayDetails();
+    // classType typeFac = f1.getClassType();
+    // if(typeFac == FAC) {
+    //     cout << "FAC!!!" << endl;
+    // } 
+
+    vector<float>* grade = nullptr;
+
+    TeachingAssistant ta1 = {"Tony, Stark", 111, courseId, TA, grade, 4343, 8, 368};
+    ta1.displayDetails();
+    classType typeTA = ta1.getClassType();
+    if(typeTA == TA) {
+        cout << "TA!!!" << endl;
+    }
+
+    // Person p1 = new TeachingAssistant{"Tony, Stark", 111, courseId, TA, grade, 4343, 8, 368};
 }

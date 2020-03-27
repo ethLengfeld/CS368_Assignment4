@@ -26,17 +26,11 @@
 class TeachingAssistant: public Employee, public Student {
 
     public:
+        TeachingAssistant(string name = "Unknown TA", int ID = -1, vector<int>* courseId = nullptr, classType type = TA,
+                          vector<float>* grade = nullptr, int officeNum = 0, int officeHours = 0, int TAcourse = 0);
 
-        TeachingAssistant(string name = "Unknown TA", int ID = -1, vector<int>* courseId = NULL, classType type = TA, vector<float>* grade = NULL, int officeNum = 0, int officeHours = 0, int TAcourse = 0) : 
-            name(name), 
-            ID(ID),
-            type(type),
-            grade(grade),
-            courseId(courseId),
-            officeNum(officeNum),
-            officeHours(officeHours),
-            TAcourse(TAcourse),
-        {}
+        // Deconstructor
+        virtual ~TeachingAssistant() = default;
 
         void displayDetails();
 

@@ -22,30 +22,25 @@
 #define STUDENT
 
 #include "Person.h"
-#include <iostream>
 
-using namespace std;
+// using namespace std;
 
-class Student: public Person {
+class Student: public virtual Person {
 
     public:
 
-        // Student(string name = "Unknown student", int ID = -1, vector<int>* courseId = NULL, classType type = STU, vector<float>* grade = NULL) : 
-        //     name(name), 
-        //     ID(ID),
-        //     type(type),
-        //     courseId(courseId),
-        //     grade(grade),
-        // {}
+        Student(string name = "Unknown Student", int ID = -1, vector<int>* courseId = nullptr, classType type = STU, vector<float>* grade = nullptr);
+
+        // deconstructor
+        virtual ~Student() = default;
 
         void displayDetails();
 
     private:
-
         vector <float>* grade;
         float average;
-
         void calcAverage();
+        void printCoursesAndGrades();
 
 };
 

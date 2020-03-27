@@ -27,8 +27,17 @@
 
 #include <string>
 #include <vector>
+#include <iostream>
 
 using namespace std;
+
+enum classType{
+    PER,
+    EMP,
+    STU,
+    FAC,
+    TA
+};
 
 class Person {
 
@@ -38,24 +47,15 @@ class Person {
     public:
 
         // TODO add comment
-        enum classType {
-            PER,
-            EMP,
-            STU,
-            FAC,
-            TA
-        };
 
 
         /**
          * TODO
          */
-        Person() = default;
-
-        Person(string name, int ID, vector<int>* courseId, classType type);
+        Person(string name = "Unknown person", int ID = -1, vector<int>* courseId = nullptr, classType type = PER);
 
         // deconstructor
-        virtual ~Person() {}
+        virtual ~Person() = default;
 
         /**
          * TODO
@@ -66,31 +66,31 @@ class Person {
          * TODO
          * @return vector <int>* - 
          */
-        vector<int>* getCourseId();
+        virtual vector<int>* getCourseId();
 
         /**
          * TODO
          * @return classType -
          */
-        classType getClassType();
+        virtual classType getClassType();
 
         /**
          * TODO
          * @return std::string - 
          */
-        string getName();
+        virtual string getName();
 
         /**
          * TODO
          * @return int - 
          */
-        int getID();
+        virtual int getID();
 
     private:
-        string name{"Unknown person"};
-        int ID{-1};
-        classType type{PER};
-        vector<int>* courseId{NULL};
+        string name;
+        int ID;
+        classType type;
+        vector<int>* courseId;
 
 };
 

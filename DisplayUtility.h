@@ -25,9 +25,6 @@
 
 void displayAllStudentNames(vector<Person*> v, int courseID);
 
-
 void displayAllPersonNames(vector<Person*> v, int courseID);
-
-
 
 #endif

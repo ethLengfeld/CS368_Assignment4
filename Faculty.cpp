@@ -16,3 +16,29 @@
 // Online sources:   
 //
 ////////////////////////////////////////////////////////////////////////////////
+
+#include "Faculty.h"
+
+Faculty::Faculty(string name,int ID,vector<int>* courseId,classType type,int officeNum,int publications) :
+    Person{name,ID,courseId,type},
+    Employee{name,ID,courseId,type,officeNum},
+    publications{publications}
+{}
+
+void Faculty::displayDetails() {
+    cout << "Faculty" << endl;
+    Employee::displayDetails();
+    // TODO
+    cout << "Courses taught: " << endl;
+    cout << "Number of publications: " << Faculty::publications << endl;
+}
+
+void Faculty::printCourses() {
+    cout << "Courses taught";
+    auto currCourse = (*Person::getCourseId()).begin();
+    while(currCourse != (*Person::getCourseId()).end()) {
+        cout << *currCourse << " ";
+        currCourse++;
+    }
+    cout << endl;
+}

@@ -16,3 +16,44 @@
 // Online sources:   
 //
 ////////////////////////////////////////////////////////////////////////////////
+
+#include "Student.h"
+
+Student::Student(string name, int ID, vector<int>* courseId, classType type, vector<float>* grade) : 
+    Person(name, ID, courseId, type)
+    {
+        Student::grade = grade;
+    }
+
+void Student::displayDetails() {
+    if(Person::getClassType() == STU) {
+        cout << "Student" << endl;
+    } else if(Person::getClassType() == TA){
+        cout << "TA" << endl;
+    }
+    Person::displayDetails();
+    cout << "Courses and grades: " << endl;
+    printCoursesAndGrades();
+    calcAverage();
+    cout << "Average: " << Student::average << endl;
+}
+
+void Student::calcAverage() {
+    auto currTotal = 0;
+    for (auto &currGrade : *Student::grade) {
+        currTotal += currGrade;
+    }
+    Student::average = (currTotal / (*Student::grade).size());
+}
+
+void Student::printCoursesAndGrades() {
+    auto currCourse = (*Person::getCourseId()).begin();
+    auto currGrade = (*Student::grade).begin();
+
+    while(currCourse != (*Person::getCourseId()).end()) {
+        cout << *currCourse << ":" << *currGrade << " ";
+        currCourse++;
+        currGrade++;
+    }
+    cout << endl;
+}

@@ -22,9 +22,7 @@
 #include <vector>
 #include <iostream>
 
-using namespace std;
-
-Person::Person(string name = "Unknown person", int ID = -1, vector<int>* courseId = NULL, classType type = PER) : 
+Person::Person(string name, int ID, vector<int>* courseId, classType type) : 
     name(name), 
     ID(ID),
     type(type),
@@ -32,19 +30,15 @@ Person::Person(string name = "Unknown person", int ID = -1, vector<int>* courseI
 {}
 
 void Person::displayDetails() {
-    cout << "PERSON " << endl;
     cout << "Name: " << Person::getName() << endl;
     cout << "ID: " << Person::getID() << endl;
-    if(Person::getClassType()==Person::classType::PER) {
-        cout << "Type: PER" << endl;
-    }
 }
 
 vector<int>* Person::getCourseId() {
     return courseId;
 }
 
-Person::classType Person::getClassType() {
+classType Person::getClassType() {
     return type;
 }
 

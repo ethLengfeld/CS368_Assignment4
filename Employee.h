@@ -20,28 +20,29 @@
 #ifndef EMPLOYEE
 #define EMPLOYEE
 
-
 #include "Person.h"
-#include <iostream>
 
-using namespace std;
+// using namespace std;
 
-
-class Employee: public Person {
+class Employee: public virtual Person {
 
     public:
 
-        int officeNum;
-
         Employee();
 
-        Employee(string name, int ID, vector<int>* courseId, classType type, int officeNum);
+        Employee(string name = "Unknown employee", int ID = -1, vector<int>* courseId = nullptr, classType type = EMP, int officeNum = 0);
+
+        // deconstructor
+        virtual ~Employee() = default;
 
         /**
          * TODO
          * 
         */
-        void displayDetails();
+        virtual void displayDetails();
+
+    protected:
+        int officeNum;
 
 };
 
