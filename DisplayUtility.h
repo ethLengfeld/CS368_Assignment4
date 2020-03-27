@@ -21,7 +21,6 @@
 #define DISPLAYUTILITY
 
 #include "Person.h"
-#include <iostream>
 
 void displayAllStudentNames(vector<Person*> v, int courseID);
 

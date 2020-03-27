@@ -30,7 +30,7 @@ TeachingAssistant::TeachingAssistant(string name, int ID, vector<int>* courseId,
 
 void TeachingAssistant::displayDetails() {
     Student::displayDetails();
-    cout << "Office number " << Employee::officeNum << endl;
+    cout << "Office number: " << Employee::officeNum << endl;
     cout << "Course TA: " << TeachingAssistant::TAcourse << endl;
     cout << "Office hours: " << TeachingAssistant::officeHours << endl;
 }

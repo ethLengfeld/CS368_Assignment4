@@ -32,7 +32,7 @@ void Student::displayDetails() {
         cout << "TA" << endl;
     }
     Person::displayDetails();
-    cout << "Courses and grades: " << endl;
+    cout << "Courses and grades: ";
     printCoursesAndGrades();
     calcAverage();
     cout << "Average: " << Student::average << endl;

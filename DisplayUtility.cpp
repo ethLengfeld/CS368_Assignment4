@@ -18,11 +18,26 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #include "DisplayUtility.h"
+#include <algorithm>
 
 void displayAllStudentNames(vector<Person*> v, int courseID) {
-    cout << "displayAllStudentNames " << courseID << endl;
+
+    for (auto student = v.begin(); student != v.end(); student++) {
+
+        if( STU == (*student)->getClassType() ) {
+
+            //if(find(v.begin(), v.end(), courseID) != v.end() ) {
+                cout << (*student)->getName() << endl;
+            //}
+
+        }
+        
+    }
 }
 
 void displayAllPersonNames(vector<Person*> v, int courseID) {
-    cout << "displayAllStudentNames " << courseID << endl;
+
+    for (auto person = v.begin(); person != v.end(); person++) {
+        cout << (*person)->getName() << endl;
+    }
 }

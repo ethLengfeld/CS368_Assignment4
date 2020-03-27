@@ -25,7 +25,6 @@ Employee::Employee(string name, int ID, vector<int>* courseId, classType type, i
 {}
 
 void Employee::displayDetails() {
-    cout << "EMPLOYEE" << endl;
     Person::displayDetails();
-    cout << "Office number " << Employee::officeNum << endl;
+    cout << "Office number: " << Employee::officeNum << endl;
 }
