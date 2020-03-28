@@ -26,9 +26,10 @@ void displayAllStudentNames(vector<Person*> v, int courseID) {
 
         if( STU == (*student)->getClassType() ) {
 
-            //if(find(v.begin(), v.end(), courseID) != v.end() ) {
+            vector<int>* courses = (*student)->getCourseId();
+            if(find( &*courses->begin(), &*courses->end(), courseID) != &*courses->end() ) {
                 cout << (*student)->getName() << endl;
-            //}
+            }
 
         }
         
@@ -38,6 +39,10 @@ void displayAllStudentNames(vector<Person*> v, int courseID) {
 void displayAllPersonNames(vector<Person*> v, int courseID) {
 
     for (auto person = v.begin(); person != v.end(); person++) {
-        cout << (*person)->getName() << endl;
+
+        vector<int>* courses = (*person)->getCourseId();
+        if(find( &*courses->begin(), &*courses->end(), courseID) != &*courses->end() ) {
+            cout << (*person)->getName() << endl;
+        }
     }
 }
