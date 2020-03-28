@@ -18,9 +18,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #include "Person.h"
-#include <string>
-#include <vector>
-#include <iostream>
 
 Person::Person(string name, int ID, vector<int>* courseId, classType type) : 
     name(name), 

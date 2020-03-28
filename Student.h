@@ -23,12 +23,11 @@
 
 #include "Person.h"
 
-// using namespace std;
-
 class Student: public virtual Person {
 
     public:
 
+        // constructor for Student class
         Student(string name = "Unknown Student", int ID = -1, vector<int>* courseId = nullptr, classType type = STU, vector<float>* grade = nullptr);
 
         // deconstructor
@@ -37,9 +36,15 @@ class Student: public virtual Person {
         void displayDetails();
 
     private:
+        // store vector of grades
         vector <float>* grade;
+        // store average from grades
         float average;
+
+        // function to calculate average
         void calcAverage();
+
+        // print courses and grades
         void printCoursesAndGrades();
 
 };

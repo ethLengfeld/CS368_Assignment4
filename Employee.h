@@ -22,26 +22,21 @@
 
 #include "Person.h"
 
-// using namespace std;
 
 class Employee: public virtual Person {
 
     public:
 
-        Employee();
-
+        // constrctor for Employee class
         Employee(string name = "Unknown employee", int ID = -1, vector<int>* courseId = nullptr, classType type = EMP, int officeNum = 0);
 
         // deconstructor
         virtual ~Employee() = default;
 
-        /**
-         * TODO
-         * 
-        */
         virtual void displayDetails();
 
     protected:
+        // store office number
         int officeNum;
 
 };

@@ -22,8 +22,14 @@
 
 #include "Person.h"
 
+/*
+ * Display all students that have taken the courseId
+*/
 void displayAllStudentNames(vector<Person*> v, int courseID);
 
+/*
+ * Display all students, TA, and Faculty that are associated with the courseId
+*/
 void displayAllPersonNames(vector<Person*> v, int courseID);
 
 #endif

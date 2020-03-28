@@ -23,3 +23,5 @@ To remove executable and any .o files run the command 'make clean'
 Warning! This will delete the executable and will require rerunning 'make' to retest it
 
 ## Code Organization
+Person is the base class
+Employee and Student inherit from Person class

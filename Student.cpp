@@ -23,6 +23,7 @@ Student::Student(string name, int ID, vector<int>* courseId, classType type, vec
     Person(name, ID, courseId, type)
     {
         Student::grade = grade;
+        calcAverage();
     }
 
 void Student::displayDetails() {
@@ -34,7 +35,6 @@ void Student::displayDetails() {
     Person::displayDetails();
     cout << "Courses and grades: ";
     printCoursesAndGrades();
-    calcAverage();
     cout << "Average: " << Student::average << endl;
 }
 
