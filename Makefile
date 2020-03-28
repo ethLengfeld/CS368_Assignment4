@@ -9,7 +9,7 @@ EXE = DemoDepartmentDatabase
 all: demo.o DisplayUtility.o Person.o Employee.o Faculty.o Student.o TeachingAssistant.o
 	$(CXX) $(CXXFLAGS) -o $(EXE) demo.o DisplayUtility.o Person.o Employee.o Faculty.o Student.o TeachingAssistant.o
 
-demo.o: demo.cpp DisplayUtility.o Person.o Employee.o Faculty.o Student.o TeachingAssistant.o
+demo.o: demo.cpp DisplayUtility.o Person.o Employee.o Faculty.o Student.o TeachingAssistant.o Faculty.o
 	$(CXX) $(CXXFLAGS) -c demo.cpp
 
 DisplayUtility.o: TeachingAssistant.o Faculty.o Student.o Employee.o Person.o DisplayUtility.h DisplayUtility.cpp
@@ -31,7 +31,8 @@ Person.o: Person.cpp Person.h
 	$(CXX) $(CXXFLAGS) -c Person.cpp
 
 clean:
-# add in rm for linux
+# swap in rm for del if linux
+#	-rm demo.o
 	-del demo.o
 	-del Person.o
 	-del Employee.o
@@ -39,5 +40,4 @@ clean:
 	-del Faculty.o
 	-del TeachingAssistant.o
 	-del DisplayUtility.o
-#	-rm DemoDepartmentDatabase
 	-del DemoDepartmentDatabase.exe

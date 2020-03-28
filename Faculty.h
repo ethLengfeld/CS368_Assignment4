@@ -25,8 +25,7 @@
 class Faculty: public Employee {
 
         public:
-
-
+                // constructor
                 Faculty(string name = "Unknown faculty", int ID = -1, vector<int>* courseId = nullptr, 
                                 classType type = FAC, int officeNum = 0, int publications = 0);
 
@@ -36,8 +35,10 @@ class Faculty: public Employee {
                 void displayDetails();
 
         private:
+                // store 
                 int publications;
 
+                // print the courses
                 void printCourses();
 };
 

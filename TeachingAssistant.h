@@ -26,6 +26,7 @@
 class TeachingAssistant: public Employee, public Student {
 
     public:
+        // constructor
         TeachingAssistant(string name = "Unknown TA", int ID = -1, vector<int>* courseId = nullptr, classType type = TA,
                           vector<float>* grade = nullptr, int officeNum = 0, int officeHours = 0, int TAcourse = 0);
 
@@ -36,7 +37,9 @@ class TeachingAssistant: public Employee, public Student {
 
 
     private:
+        // store office hours
         int officeHours;
+        // store taught course
         int TAcourse;
 
 };
