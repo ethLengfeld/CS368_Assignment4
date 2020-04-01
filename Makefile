@@ -1,5 +1,4 @@
 # Ethan Lengfeld
-# 9074020836
 # Makefile to compile Assignment 4 - Department Database code
 
 CXX=g++
