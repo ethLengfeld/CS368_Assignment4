@@ -1,4 +1,4 @@
-Author: Ethan Lengfeld 9074020836
+Author: Ethan Lengfeld
 README file for Assignment 4
 
 
